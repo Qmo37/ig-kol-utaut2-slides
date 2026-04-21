@@ -249,12 +249,14 @@
             }
             .s-cover .title-block {
                 position: absolute;
-                left: 120px;
-                top: 260px;
-                width: 940px;
+                left: 50%;
+                top: 50%;
+                width: 1180px;
+                transform: translate(-50%, -54%);
+                text-align: center;
             }
             .s-cover h1 {
-                font-size: 92px;
+                font-size: 108px;
                 line-height: 1.05;
                 letter-spacing: -0.025em;
                 margin: 0;
@@ -286,47 +288,13 @@
                 color: transparent;
                 font-weight: 800;
             }
-            .s-cover .abstract {
-                position: absolute;
-                left: 120px;
-                bottom: 260px;
-                width: 920px;
-                font-size: 24px;
-                line-height: 1.55;
-                color: rgba(20, 20, 20, 0.84);
-                padding-top: 22px;
-                border-top: 1px solid var(--ink);
-            }
-            .s-cover .diagram-preview {
-                position: absolute;
-                right: 120px;
-                top: 300px;
-                width: 640px;
-                height: 380px;
-                border: 1px solid var(--ink);
-                background: var(--paper);
-                padding: 28px 30px;
-            }
-            .s-cover .diagram-preview .plbl {
-                font-size: 16px;
-                letter-spacing: 0.2em;
-                text-transform: uppercase;
-                color: rgba(20, 20, 20, 0.7);
-                margin-bottom: 14px;
-                display: flex;
-                justify-content: space-between;
-            }
-            .s-cover .diagram-preview svg {
-                width: 100%;
-                height: 288px;
-            }
             .s-cover .bottom {
                 position: absolute;
                 left: 120px;
                 right: 120px;
                 bottom: 120px;
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: 1.4fr 1fr 0.72fr;
                 gap: 36px;
                 padding-top: 26px;
                 border-top: 1px solid var(--ink);
@@ -1414,15 +1382,25 @@
                 margin-top: 14px;
                 padding-top: 12px;
                 border-top: 1px dashed var(--rule);
-                font-family: "IBM Plex Mono", monospace;
-                font-size: 15px;
-                line-height: 1.65;
+                font-size: 20px;
+                line-height: 1.42;
                 color: rgba(20, 20, 20, 0.82);
-                white-space: pre-line;
+            }
+            .s-def .cell .items .items-label {
+                font-family: "Space Grotesk", sans-serif;
+                font-size: 12px;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: rgba(20, 20, 20, 0.54);
+                margin-bottom: 7px;
+            }
+            .s-def .cell .items .q {
+                margin-bottom: 5px;
             }
             .s-def .cell .items b {
                 color: var(--ig-pink);
                 font-weight: 600;
+                font-family: "IBM Plex Mono", monospace;
             }
 
             /* ============= SLIDE 14 · AI flow ============= */
@@ -1870,7 +1848,8 @@
                 background: #000;
                 color: #fff;
                 border-radius: 999px;
-                font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Helvetica Neue",
                     Helvetica, Arial, sans-serif;
                 font-size: 12px;
                 letter-spacing: 0.01em;
@@ -1940,7 +1919,8 @@
                 min-width: 16px;
                 height: 16px;
                 padding: 0 4px;
-                font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+                font-family:
+                    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
                 font-size: 10px;
                 line-height: 1;
                 color: rgba(255, 255, 255, 0.88);
@@ -2046,104 +2026,16 @@
 
             <div class="title-block">
                 <h1 class="ming-b">
-                    當 Instagram<br />
-                    的 <span class="fig">KOL </span
-                    ><span class="fig-zh">內容</span><br />
-                    遇上 UTAUT2。
+                    <span class="fig">Instagram KOL</span><br />
+                    對 18～25 歲用戶<br />
+                    購買意願之影響研究
                 </h1>
-            </div>
-
-            <div class="abstract ming">
-                一份針對 <b>18–25 歲</b> 用戶的量化研究：將 UTAUT2
-                視為平台採用的地基，再掛上 <b>來源可信度（SC）</b> 與
-                <b>知覺風險（PR）</b> 兩塊外加構面，解釋 KOL
-                推薦內容如何被採納、轉化為行為意圖，最終驅動購買意向。
-            </div>
-
-            <div class="diagram-preview">
-                <div class="plbl eng-sg">
-                    <span>Fig. 00 · preview schematic</span><span>01 / 16</span>
-                </div>
-                <svg viewBox="0 0 600 260">
-                    <defs>
-                        <marker
-                            id="cArrow"
-                            viewBox="0 0 10 10"
-                            refX="9"
-                            refY="5"
-                            markerWidth="8"
-                            markerHeight="8"
-                            orient="auto"
-                        >
-                            <path d="M0,0 L10,5 L0,10 z" fill="#141414" />
-                        </marker>
-                        <marker
-                            id="cArrowPink"
-                            viewBox="0 0 10 10"
-                            refX="9"
-                            refY="5"
-                            markerWidth="8"
-                            markerHeight="8"
-                            orient="auto"
-                        >
-                            <path d="M0,0 L10,5 L0,10 z" fill="#E1306C" />
-                        </marker>
-                    </defs>
-                    <g fill="#faf7f2" stroke="#141414" stroke-width="1">
-                        <rect x="20" y="20" width="140" height="44" />
-                        <rect x="20" y="80" width="140" height="44" />
-                        <rect x="20" y="140" width="140" height="44" />
-                        <rect x="20" y="200" width="140" height="44" />
-                        <rect x="245" y="105" width="130" height="54" />
-                        <rect x="460" y="105" width="130" height="54" />
-                    </g>
-                    <g
-                        font-family="Noto Serif TC, serif"
-                        font-weight="700"
-                        font-size="17"
-                        fill="#141414"
-                        text-anchor="middle"
-                    >
-                        <text x="90" y="48">績效期望</text>
-                        <text x="90" y="108">社會影響</text>
-                        <text x="90" y="168">享樂動機</text>
-                        <text x="90" y="228">習慣 ⋯ FC</text>
-                        <text x="310" y="138">BI 行為意圖</text>
-                        <text x="525" y="138">PI 購買意向</text>
-                    </g>
-                    <g
-                        stroke="#E1306C"
-                        stroke-width="1.1"
-                        fill="none"
-                        marker-end="url(#cArrowPink)"
-                    >
-                        <path d="M160 42 C 210 42, 220 130, 245 130" />
-                        <path d="M160 102 C 205 102, 225 132, 245 132" />
-                        <path d="M160 162 C 205 162, 225 134, 245 134" />
-                        <path d="M160 222 C 230 222, 400 220, 525 165" />
-                    </g>
-                    <path
-                        d="M375 132 L 460 132"
-                        stroke="#141414"
-                        stroke-width="1.6"
-                        fill="none"
-                        marker-end="url(#cArrow)"
-                    />
-                </svg>
             </div>
 
             <div class="bottom">
                 <div>
-                    <div class="k eng-sg">TITLE</div>
-                    <div class="v ming">Instagram KOL 內容對購買意向之影響</div>
-                </div>
-                <div>
-                    <div class="k eng-sg">SAMPLE</div>
-                    <div class="v ming">18–25 歲 IG 使用者</div>
-                </div>
-                <div>
-                    <div class="k eng-sg">FRAMEWORK</div>
-                    <div class="v ming">UTAUT2 + SC + PR</div>
+                    <div class="k eng-sg">MEMBERS</div>
+                    <div class="v ming">許祐瑄 · 吳家妤 · 陳政顯 · 陳鉑琁</div>
                 </div>
                 <div>
                     <div class="k eng-sg">COURSE</div>
@@ -2583,7 +2475,7 @@
                             <div class="nm">社會影響</div>
                             <div class="desc hei">
                                 對用戶重要的人，認為他應該參考 Instagram KOL
-                                推薦進行購物。
+                                推薦的選擇進行購物。
                             </div>
                         </div>
                     </div>
@@ -3288,17 +3180,17 @@
             <div class="chrome hei-m">
                 <div class="loc">
                     <span class="dot"></span
-                    ><span>Section 04 · 測量 · 操作型定義</span>
+                    ><span>Section 04 · 測量 · 操作型定義 + 問卷題項</span>
                 </div>
                 <div class="pg mono"><b>12</b> / 16</div>
             </div>
             <div class="doc-head">
                 <h2 class="ming-b">
-                    <span class="fig">Tab. 01</span>操作型定義 (上)　·　PE / EE
-                    / SI / FC / HM
+                    <span class="fig">Tab. 01</span>操作型定義(上) + 問卷題項 -
+                    PE / EE / SI / FC / HM
                 </h2>
                 <div class="right eng-sg">
-                    5 of 10 constructs<br />continues → 13 / 16
+                    5 of 10 constructs<br />3 items each
                 </div>
             </div>
 
@@ -3314,6 +3206,23 @@
                         使用者知覺到參考 Instagram KOL
                         推薦之商品資訊，能幫助其提升購物決策的品質、效率，或增加找到合適產品的機會。
                     </div>
+                    <div class="items hei">
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>PE1</b>　參考 Instagram KOL
+                            的貼文有助於我找到實用的商品資訊。
+                        </div>
+                        <div class="q">
+                            <b>PE2</b>　透過 Instagram KOL
+                            的推薦能提升我的購物效率。
+                        </div>
+                        <div class="q">
+                            <b>PE3</b>　Instagram KOL
+                            的內容對我評估商品是否值得購買有幫助。
+                        </div>
+                    </div>
                     <div class="ref">
                         <b>Davis</b> (1989)<br /><b>Venkatesh et al.</b> (2012)
                     </div>
@@ -3328,6 +3237,23 @@
                     <div class="def hei">
                         使用者知覺到在 Instagram 上搜尋、閱讀或理解 KOL
                         推薦內容之過程是輕鬆、簡單且不費心力的程度。
+                    </div>
+                    <div class="items hei">
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>EE1</b>　我能輕易在 Instagram 上找到我想參考的
+                            KOL 貼文。
+                        </div>
+                        <div class="q">
+                            <b>EE2</b>　我操作 Instagram
+                            的商品標籤與連結並不困難。
+                        </div>
+                        <div class="q">
+                            <b>EE3</b>　理解 Instagram KOL
+                            介紹商品的方式對我而言相當容易。
+                        </div>
                     </div>
                     <div class="ref">
                         <b>Moore &amp; Benbasat</b> (1991)<br /><b>Davis</b>
@@ -3345,8 +3271,25 @@
                         使用者知覺到對其重要的人（朋友、追蹤的網紅、社群成員）認為他應該參考
                         Instagram KOL 推薦進行購物的程度。
                     </div>
+                    <div class="items hei">
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>SI1</b>　我身邊的朋友會參考 Instagram KOL
+                            推薦進行購物。
+                        </div>
+                        <div class="q">
+                            <b>SI2</b>　對我重要的人認為參考 Instagram KOL
+                            購物是合理的做法。
+                        </div>
+                        <div class="q">
+                            <b>SI3</b>　我所關注的社群氛圍支持透過 KOL
+                            貼文認識新商品。
+                        </div>
+                    </div>
                     <div class="ref">
-                        <b>Taylor &amp; Todd</b> (1995)<br /><b>Ajzen</b> (1991)
+                        <b>Venkatesh et al.</b> (2012)<br /><b>Ajzen</b> (1991)
                     </div>
                 </div>
                 <div class="cell">
@@ -3359,6 +3302,23 @@
                     <div class="def hei">
                         使用者知覺到現有 Instagram
                         平台功能（標籤、導購連結、支付）以及個人軟硬體資源，足以支撐其完成購物流程的程度。
+                    </div>
+                    <div class="items hei">
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>FC1</b>　我擁有足夠的設備與網路環境在 Instagram
+                            上瀏覽 KOL 內容。
+                        </div>
+                        <div class="q">
+                            <b>FC2</b>　當我想依 KOL
+                            推薦購物時，我知道如何完成付款與配送流程。
+                        </div>
+                        <div class="q">
+                            <b>FC3</b>　遇到與 Instagram
+                            購物相關的問題時，我能獲得必要協助。
+                        </div>
                     </div>
                     <div class="ref">
                         <b>Venkatesh et al.</b> (2012)<br /><b
@@ -3378,11 +3338,28 @@
                         使用者在瀏覽 Instagram KOL
                         推薦貼文、觀看短影音或直播過程中，所感受到的愉悅、樂趣、放鬆或娛樂性的程度。
                     </div>
+                    <div class="items hei">
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>HM1</b>　瀏覽 Instagram KOL
+                            的推薦內容讓我感到愉快。
+                        </div>
+                        <div class="q">
+                            <b>HM2</b>　觀看 KOL
+                            開箱與使用示範對我而言是一種享受。
+                        </div>
+                        <div class="q">
+                            <b>HM3</b>　我覺得在 Instagram 上接收 KOL
+                            分享的商品資訊相當有趣。
+                        </div>
+                    </div>
                     <div class="ref">
                         <b>Venkatesh et al.</b> (2012)<br /><b
-                            >Brown &amp; Venkatesh</b
+                            >Tamilmani et al.</b
                         >
-                        (2005)
+                        (2019)<br /><b>Tirtayani et al.</b> (2024)
                     </div>
                 </div>
             </div>
@@ -3403,11 +3380,11 @@
             </div>
             <div class="doc-head">
                 <h2 class="ming-b">
-                    <span class="fig">Tab. 02</span>操作型定義 (下) + 代表題項 -
+                    <span class="fig">Tab. 02</span>操作型定義(下) + 問卷題項 -
                     HB / SC / PR / BI / PI
                 </h2>
                 <div class="right eng-sg">
-                    5 of 10 constructs<br />+ representative item
+                    5 of 10 constructs<br />3 items each
                 </div>
             </div>
 
@@ -3424,14 +3401,26 @@
                         內容並參考其建議已成為一種自動化或潛意識的行為模式。
                     </div>
                     <div class="items">
-                        <b>HB2</b>　我經常在不知不覺中打開 Instagram 瀏覽 KOL
-                        貼文。
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>HB1</b>　使用 Instagram 已成為我的日常習慣。
+                        </div>
+                        <div class="q">
+                            <b>HB2</b>　我經常在不知不覺中打開 Instagram 瀏覽
+                            KOL 貼文。
+                        </div>
+                        <div class="q">
+                            <b>HB3</b>　瀏覽 Instagram KOL
+                            的內容對我而言是很自然的行為。
+                        </div>
                     </div>
                     <div class="ref">
-                        <b>Venkatesh et al.</b> (2012)<br /><b
-                            >Limayem et al.</b
+                        <b>Limayem et al.</b> (2007)<br /><b
+                            >Venkatesh et al.</b
                         >
-                        (2007)
+                        (2012)
                     </div>
                 </div>
                 <div class="cell accent">
@@ -3446,12 +3435,25 @@
                         在特定領域的專業知識、推薦動機的誠實性，以及其個人視覺形象吸引力的綜合正面評價。
                     </div>
                     <div class="items">
-                        <b>SC1</b>　我認為 Instagram KOL
-                        分享的使用經驗是真誠的。
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>SC1</b>　我認為 Instagram KOL
+                            分享的使用經驗是真誠的。
+                        </div>
+                        <div class="q">
+                            <b>SC2</b>　我相信我關注的 KOL
+                            不會刻意隱瞞商品缺點。
+                        </div>
+                        <div class="q">
+                            <b>SC3</b>　KOL
+                            所揭露的業配資訊讓我覺得其立場可被信任。
+                        </div>
                     </div>
                     <div class="ref">
-                        <b>Ohanian</b> (1990)<br /><b>Hovland &amp; Weiss</b>
-                        (1951)
+                        <b>Ohanian</b> (1990)<br /><b>Lou &amp; Yuan</b>
+                        (2019)<br /><b>Chetioui et al.</b> (2024)
                     </div>
                 </div>
                 <div class="cell accent">
@@ -3466,11 +3468,26 @@
                         推薦商品時，對可能產生的潛在損失（金錢、品質不符、個資外洩或社會觀感）的不確定知覺。
                     </div>
                     <div class="items">
-                        <b>PR1</b>　我擔心依 KOL
-                        推薦購買的商品可能與實際效果有落差。
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>PR1</b>　我擔心依 Instagram KOL
+                            推薦購買的商品可能與實際效果有落差。
+                        </div>
+                        <div class="q">
+                            <b>PR2</b>　透過 KOL
+                            貼文購物讓我覺得存在金錢損失的疑慮。
+                        </div>
+                        <div class="q">
+                            <b>PR3</b>　透過 KOL
+                            貼文購買的商品，若不符預期難以退換，令我感到風險。
+                        </div>
                     </div>
                     <div class="ref">
-                        <b>Bauer</b> (1960)<br /><b>Featherman &amp; Pavlou</b>
+                        <b>Jacoby &amp; Kaplan</b> (1972)<br /><b
+                            >Featherman &amp; Pavlou</b
+                        >
                         (2003)
                     </div>
                 </div>
@@ -3486,11 +3503,25 @@
                         的推薦內容後，主觀評估自己在未來一段時間內，實際執行購買該商品或採用該建議的可能性與計畫程度。
                     </div>
                     <div class="items">
-                        <b>BI1</b>　我打算在未來持續透過 IG 參考 KOL
-                        推薦的商品。
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>BI1</b>　我打算在未來持續透過 Instagram 參考 KOL
+                            推薦的商品。
+                        </div>
+                        <div class="q">
+                            <b>BI2</b>　我預計我會經常查看 Instagram 上 KOL
+                            的開箱或示範。
+                        </div>
+                        <div class="q">
+                            <b>BI3</b>　我會向他人推薦將 Instagram KOL
+                            作為購物的參考來源。
+                        </div>
                     </div>
                     <div class="ref">
-                        <b>Ajzen</b> (1991)<br /><b>Venkatesh et al.</b> (2012)
+                        <b>Ajzen</b> (1991)<br /><b>Fishbein &amp; Ajzen</b>
+                        (1975)
                     </div>
                 </div>
                 <div class="cell">
@@ -3505,13 +3536,25 @@
                         推薦內容後，未來實際執行購買該商品或推薦服務的主觀機率與傾向。
                     </div>
                     <div class="items">
-                        <b>PI1</b>　未來我願意購買 IG KOL 所推薦的商品。
+                        <div class="items-label eng-sg">
+                            Questionnaire Items
+                        </div>
+                        <div class="q">
+                            <b>PI1</b>　未來我願意購買 Instagram KOL
+                            所推薦的商品。
+                        </div>
+                        <div class="q">
+                            <b>PI2</b>　若價格與需求相符，我會優先考慮 KOL
+                            貼文中介紹的品牌。
+                        </div>
+                        <div class="q">
+                            <b>PI3</b>　我打算在近期內購買該 KOL
+                            在貼文中所介紹的商品。
+                        </div>
                     </div>
                     <div class="ref">
-                        <b>Fishbein &amp; Ajzen</b> (1975)<br /><b
-                            >Dodds et al.</b
-                        >
-                        (1991)
+                        <b>Dodds et al.</b> (1991)<br /><b>Schlosser et al.</b>
+                        (2006)
                     </div>
                 </div>
             </div>
@@ -3804,7 +3847,9 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
             <div class="team-table">
                 <div class="role-card">
                     <div>
-                        <div class="meta eng-sg"><span>Report</span><b>01</b></div>
+                        <div class="meta eng-sg">
+                            <span>Report</span><b>01</b>
+                        </div>
                         <h3>報告</h3>
                         <div class="count-label">1 PERSON</div>
                     </div>
@@ -3815,19 +3860,27 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
 
                 <div class="role-card">
                     <div>
-                        <div class="meta eng-sg"><span>Paper · Literature</span><b>02</b></div>
+                        <div class="meta eng-sg">
+                            <span>Paper · Literature</span><b>02</b>
+                        </div>
                         <h3>書面、文獻</h3>
                         <div class="count-label">2 PEOPLE</div>
                     </div>
                     <div class="members">
-                        <div class="member">吳家妤 <span>Writing · Lit.</span></div>
-                        <div class="member">陳政顯 <span>Writing · Lit.</span></div>
+                        <div class="member">
+                            吳家妤 <span>Writing · Lit.</span>
+                        </div>
+                        <div class="member">
+                            陳政顯 <span>Writing · Lit.</span>
+                        </div>
                     </div>
                 </div>
 
                 <div class="role-card">
                     <div>
-                        <div class="meta eng-sg"><span>Slides</span><b>03</b></div>
+                        <div class="meta eng-sg">
+                            <span>Slides</span><b>03</b>
+                        </div>
                         <h3>簡報</h3>
                         <div class="count-label">1 PERSON</div>
                     </div>
@@ -3843,7 +3896,12 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
             </div>
         </section>
 
-        <div class="deck-controls" id="deck-controls" role="toolbar" aria-label="Deck controls">
+        <div
+            class="deck-controls"
+            id="deck-controls"
+            role="toolbar"
+            aria-label="Deck controls"
+        >
             <button
                 class="btn prev"
                 type="button"
@@ -3940,8 +3998,15 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                 total.textContent = String(slides.length);
 
                 try {
-                    const saved = parseInt(localStorage.getItem(STORAGE_KEY), 10);
-                    if (Number.isFinite(saved) && saved >= 0 && saved < slides.length) {
+                    const saved = parseInt(
+                        localStorage.getItem(STORAGE_KEY),
+                        10,
+                    );
+                    if (
+                        Number.isFinite(saved) &&
+                        saved >= 0 &&
+                        saved < slides.length
+                    ) {
                         index = saved;
                     }
                 } catch (error) {
@@ -3953,7 +4018,10 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                         window.innerWidth / DESIGN_W,
                         window.innerHeight / DESIGN_H,
                     );
-                    document.documentElement.style.setProperty("--deck-scale", scale);
+                    document.documentElement.style.setProperty(
+                        "--deck-scale",
+                        scale,
+                    );
                 }
 
                 function setControlsVisible(visible) {
@@ -3963,13 +4031,22 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                 function flashControls() {
                     setControlsVisible(true);
                     if (hideTimer) clearTimeout(hideTimer);
-                    hideTimer = setTimeout(() => setControlsVisible(false), 1800);
+                    hideTimer = setTimeout(
+                        () => setControlsVisible(false),
+                        1800,
+                    );
                 }
 
                 function apply(reason) {
                     slides.forEach((slide, slideIndex) => {
-                        slide.classList.toggle("deck-active", slideIndex === index);
-                        slide.toggleAttribute("data-deck-active", slideIndex === index);
+                        slide.classList.toggle(
+                            "deck-active",
+                            slideIndex === index,
+                        );
+                        slide.toggleAttribute(
+                            "data-deck-active",
+                            slideIndex === index,
+                        );
                     });
                     current.textContent = String(index + 1);
                     try {
@@ -3990,7 +4067,10 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                 }
 
                 function go(target, reason) {
-                    const clamped = Math.max(0, Math.min(slides.length - 1, target));
+                    const clamped = Math.max(
+                        0,
+                        Math.min(slides.length - 1, target),
+                    );
                     if (clamped !== index) {
                         index = clamped;
                         apply(reason);
@@ -3998,7 +4078,9 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                     flashControls();
                 }
 
-                previous.addEventListener("click", () => go(index - 1, "click"));
+                previous.addEventListener("click", () =>
+                    go(index - 1, "click"),
+                );
                 next.addEventListener("click", () => go(index + 1, "click"));
                 reset.addEventListener("click", () => go(0, "click"));
                 controls.addEventListener("mouseenter", () => {
@@ -4029,7 +4111,9 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                     if (
                         target &&
                         (target.isContentEditable ||
-                            /^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(target.tagName))
+                            /^(INPUT|TEXTAREA|SELECT|BUTTON)$/.test(
+                                target.tagName,
+                            ))
                     ) {
                         return;
                     }
@@ -4043,7 +4127,10 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                         event.key === "Spacebar"
                     ) {
                         go(index + 1, "keyboard");
-                    } else if (event.key === "ArrowLeft" || event.key === "PageUp") {
+                    } else if (
+                        event.key === "ArrowLeft" ||
+                        event.key === "PageUp"
+                    ) {
                         go(index - 1, "keyboard");
                     } else if (event.key === "Home") {
                         go(0, "keyboard");
@@ -4054,7 +4141,8 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                     } else if (/^[0-9]$/.test(event.key)) {
                         const targetIndex =
                             event.key === "0" ? 9 : parseInt(event.key, 10) - 1;
-                        if (targetIndex < slides.length) go(targetIndex, "keyboard");
+                        if (targetIndex < slides.length)
+                            go(targetIndex, "keyboard");
                     } else {
                         handled = false;
                     }
@@ -4131,14 +4219,17 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                 function scheduleToggleClose() {
                     if (toggleHideTimer) clearTimeout(toggleHideTimer);
                     toggleHideTimer = setTimeout(() => {
-                        if (!panel.hasAttribute("data-on")) setToggleVisible(false);
+                        if (!panel.hasAttribute("data-on"))
+                            setToggleVisible(false);
                     }, 500);
                 }
 
                 function setPanelOpen(open) {
                     panel.toggleAttribute("data-on", open);
                     toggle.setAttribute("aria-expanded", String(open));
-                    setToggleVisible(open || toggle.hasAttribute("data-visible"));
+                    setToggleVisible(
+                        open || toggle.hasAttribute("data-visible"),
+                    );
                 }
 
                 toggle.addEventListener("click", () => {
