@@ -4107,19 +4107,36 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
                 const accent = document.getElementById("tw-accent");
                 const theme = document.getElementById("tw-theme");
                 const grid = document.getElementById("tw-grid");
+                let panelHideTimer = null;
 
                 accent.value = TWEAKS.accent;
                 theme.value = TWEAKS.theme;
                 grid.checked = TWEAKS.grid;
 
                 function setPanelOpen(open) {
+                    if (panelHideTimer) clearTimeout(panelHideTimer);
                     panel.toggleAttribute("data-on", open);
                     toggle.setAttribute("aria-expanded", String(open));
+                }
+
+                function schedulePanelClose() {
+                    if (panelHideTimer) clearTimeout(panelHideTimer);
+                    panelHideTimer = setTimeout(() => {
+                        if (!toggle.matches(":hover") && !panel.matches(":hover")) {
+                            setPanelOpen(false);
+                        }
+                    }, 500);
                 }
 
                 toggle.addEventListener("click", () => {
                     setPanelOpen(!panel.hasAttribute("data-on"));
                 });
+                toggle.addEventListener("mouseenter", () => setPanelOpen(true));
+                toggle.addEventListener("mouseleave", schedulePanelClose);
+                toggle.addEventListener("focus", () => setPanelOpen(true));
+                panel.addEventListener("mouseenter", () => setPanelOpen(true));
+                panel.addEventListener("mouseleave", schedulePanelClose);
+                panel.addEventListener("focusin", () => setPanelOpen(true));
 
                 accent.addEventListener("input", (event) => {
                     TWEAKS.accent = event.target.value;
