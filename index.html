@@ -1,15 +1,11 @@
 <!doctype html>
 <html lang="zh-Hant">
 <head>
-<style data-omelette-injected>html,body{background:transparent}</style><script data-omelette-injected>(()=>{var $=["https://claude.ai","https://preview.claude.ai","https://eap-omelette.claude.ai"];var F=30000;var A=3000;document.addEventListener("DOMContentLoaded",()=>{const Q="transform-react-jsx-source";document.querySelectorAll('script[type="text/babel"],script[type="text/jsx"]').forEach((J,V)=>{const X=J.getAttribute("data-plugins")||"";if(X.indexOf(Q)<0){J.setAttribute("data-plugins",X?`${X},${Q}`:Q)}if(!J.hasAttribute("data-filename")){J.setAttribute("data-filename",J.getAttribute("src")||`inline-${V}`)}})});var W=window.parent;if(W&&W!==window){const Q=(z,k)=>{try{W.postMessage({__omelette_log:true,type:z,data:k},"*")}catch{}};["log","warn","error"].forEach((z)=>{const k=console[z];console[z]=(...C)=>{const D=C.map((w)=>{try{return typeof w==="object"?JSON.stringify(w):String(w)}catch{try{return String(w)}catch{return"[unstringifiable]"}}}).join(" ");Q(z,D);k.apply(console,C)}});window.addEventListener("error",(z)=>{const k=z.target;if(k&&k!==window&&k.tagName){const C=k.src||k.href||"";Q("resource_error",`${k.tagName} failed to load: ${C}`)}else{Q("error",`${z.message||"Unknown error"} at ${z.filename||"?"}:${z.lineno||0}:${z.colno||0}`)}},true);window.addEventListener("unhandledrejection",(z)=>{const k=z.reason;const C=k instanceof Error?`${k.message} ${k.stack}`:String(k);Q("error",`Unhandled rejection: ${C}`)});const J=()=>{try{W.postMessage({type:"omelette:height",height:document.documentElement.scrollHeight},"*")}catch{}};if(document.readyState==="complete")J();else window.addEventListener("load",J);if(window.ResizeObserver)new ResizeObserver(J).observe(document.documentElement);const V={};let X=0;window.claude={complete(z){return new Promise((k,C)=>{if(!$.length){C(new Error("claude.complete: no parent origin"));return}const D=`c${++X}`;const w=()=>setTimeout(()=>{delete V[D];C(new Error(`claude.complete: no data for ${F/1000}s`))},F);const K=w();V[D]={resolve:k,reject:C,text:"",t:K,arm:w};try{for(const Z of $){W.postMessage({__om_api:true,id:D,body:z},Z)}}catch(Z){clearTimeout(K);delete V[D];C(Z)}})}};const Y={};let h=0;window.omelette={writeFile:(z,k)=>new Promise((C,D)=>{if(!$.length){C();return}const w=`f${++h}`;const K=setTimeout(()=>{delete Y[w];C()},A);Y[w]={resolve:C,reject:D,t:K};try{for(const Z of $){W.postMessage({__om_file:true,id:w,op:"write",path:z,content:k},Z)}}catch{clearTimeout(K);delete Y[w];C()}})};const b=(z)=>{try{return JSON.stringify(z)}catch{return JSON.stringify(String(z))}};window.addEventListener("message",(z)=>{if($.indexOf(z.origin)<0)return;if(z.source!==W)return;const k=z.data;if(!k)return;if(k.__om_file_r){const w=Y[k.id];if(!w)return;clearTimeout(w.t);delete Y[k.id];if(k.ok)w.resolve();else w.reject(new Error(k.error||"write failed"));return}if(k.__om_api_r){const w=V[k.id];if(!w)return;if(k.error!=null){clearTimeout(w.t);delete V[k.id];w.reject(new Error(k.error));return}if(k.chunk!=null){clearTimeout(w.t);w.t=w.arm();w.text+=k.chunk;return}if(k.done){clearTimeout(w.t);delete V[k.id];w.resolve(k.text!=null?k.text:w.text);return}return}if(!k.__om_eval)return;const C=k;const D=(w)=>{z.source.postMessage({...w,__om_eval_r:1,id:C.id},z.origin)};try{const w=(0,eval)(C.code);if(w&&typeof w.then==="function"){w.then((K)=>D({ok:1,v:b(K)}),(K)=>D({ok:0,e:String(K)}))}else{D({ok:1,v:b(w)})}}catch(w){D({ok:0,e:String(w)})}})}})();
-</script>
-
 <meta charset="utf-8">
 <title>Instagram KOL × UTAUT2 · 研究簡報</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="deck-stage.js"></script>
 <style>
   html, body { margin: 0; padding: 0; background: #000; }
   * { box-sizing: border-box; }
@@ -652,26 +648,40 @@
   }
   .s-close .bye b { font-family: "Source Serif 4", serif; font-style: italic; font-size: 30px; color: var(--paper); font-weight: 600; letter-spacing: 0; text-transform: none; }
 
-  /* tweaks UI */
-  .tweaks {
-    position: fixed; right: 20px; bottom: 76px; width: 260px;
-    background: rgba(20,20,20,0.96); color: #faf7f2;
-    padding: 18px 18px 16px; border-radius: 10px;
-    font-family: "Noto Sans TC", system-ui, sans-serif; font-size: 13px;
-    z-index: 2147483500; display: none; backdrop-filter: blur(8px);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  
+  /* page flow cleanup */
+  html, body { background: #111; }
+  body {
+    padding: 36px 0 60px;
   }
-  .tweaks[data-on] { display: block; }
-  .tweaks h5 { margin: 0 0 12px; font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: rgba(250,247,242,0.6); }
-  .tweaks label { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 8px 0; }
-  .tweaks select, .tweaks input[type=range] { background: rgba(250,247,242,0.08); color: inherit; border: 1px solid rgba(250,247,242,0.2); padding: 4px 6px; border-radius: 4px; font: inherit; }
-  .tweaks input[type=color] { width: 48px; height: 24px; border: 0; background: transparent; }
+  .slide {
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto 40px;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.28);
+  }
+  .slide:last-of-type { margin-bottom: 0; }
+
+  @media print {
+    html, body { background: #fff; }
+    body { padding: 0; }
+    .slide {
+      margin: 0;
+      box-shadow: none;
+      break-after: page;
+      page-break-after: always;
+    }
+    .slide:last-of-type {
+      break-after: auto;
+      page-break-after: auto;
+    }
+  }
 
 </style>
 </head>
 <body>
 
-<deck-stage width="1920" height="1080">
+
 
   <!-- ================================================== 01 COVER ================================================== -->
   <section class="slide s-cover" data-label="Cover">
@@ -1536,78 +1546,5 @@ Instagram KOL 貼文購物的用戶，請協助對此進行審查。</pre>
       <span>研究所 行銷管理 · 期末報告</span>
     </div>
   </section>
-
-</deck-stage>
-
-<!-- Tweaks panel -->
-<div class="tweaks" id="tweaks">
-  <h5>Tweaks</h5>
-  <label>強調色 <input type="color" id="tw-accent" value="#E1306C"></label>
-  <label>底色主題
-    <select id="tw-theme">
-      <option value="paper">暖紙 (預設)</option>
-      <option value="linen">淺亞麻</option>
-      <option value="slate">冷灰</option>
-    </select>
-  </label>
-  <label>網格線 <input type="checkbox" id="tw-grid" checked></label>
-</div>
-
-<script>
-(function(){
-  const TWEAKS = /*EDITMODE-BEGIN*/{
-    "accent": "#E1306C",
-    "theme": "paper",
-    "grid": true
-  }/*EDITMODE-END*/;
-
-  const root = document.documentElement;
-  const themes = {
-    paper:  { paper: "#faf7f2", ink: "#141414" },
-    linen:  { paper: "#f0ead9", ink: "#141414" },
-    slate:  { paper: "#eaeaea", ink: "#141414" }
-  };
-
-  function apply(){
-    root.style.setProperty("--ig-pink", TWEAKS.accent);
-    const t = themes[TWEAKS.theme] || themes.paper;
-    root.style.setProperty("--paper", t.paper);
-    root.style.setProperty("--ink", t.ink);
-    document.querySelectorAll(".slide").forEach(s=>{
-      if (s.classList.contains("title") || s.classList.contains("section-dark")) return;
-      s.style.backgroundImage = TWEAKS.grid
-        ? "linear-gradient(to right, rgba(20,20,20,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(20,20,20,0.05) 1px, transparent 1px)"
-        : "none";
-    });
-  }
-  apply();
-
-  const panel = document.getElementById("tweaks");
-  document.getElementById("tw-accent").value = TWEAKS.accent;
-  document.getElementById("tw-theme").value = TWEAKS.theme;
-  document.getElementById("tw-grid").checked = TWEAKS.grid;
-
-  document.getElementById("tw-accent").addEventListener("input", e => {
-    TWEAKS.accent = e.target.value; apply();
-    window.parent.postMessage({type:"__edit_mode_set_keys", edits:{accent: TWEAKS.accent}}, "*");
-  });
-  document.getElementById("tw-theme").addEventListener("change", e => {
-    TWEAKS.theme = e.target.value; apply();
-    window.parent.postMessage({type:"__edit_mode_set_keys", edits:{theme: TWEAKS.theme}}, "*");
-  });
-  document.getElementById("tw-grid").addEventListener("change", e => {
-    TWEAKS.grid = e.target.checked; apply();
-    window.parent.postMessage({type:"__edit_mode_set_keys", edits:{grid: TWEAKS.grid}}, "*");
-  });
-
-  window.addEventListener("message", (ev) => {
-    const d = ev.data || {};
-    if (d.type === "__activate_edit_mode") panel.setAttribute("data-on","");
-    if (d.type === "__deactivate_edit_mode") panel.removeAttribute("data-on");
-  });
-  window.parent.postMessage({type:"__edit_mode_available"}, "*");
-})();
-</script>
-
 </body>
 </html>
