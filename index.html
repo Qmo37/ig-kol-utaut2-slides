@@ -1476,6 +1476,14 @@
                 grid-template-columns: 1.3fr 1fr;
                 gap: 36px;
             }
+            .s-ai .prompt-brief {
+                position: absolute;
+                left: 80px;
+                top: 500px;
+                width: calc((100% - 196px) * 1.3 / 2.3);
+                height: 240px;
+                box-sizing: border-box;
+            }
             .s-ai .prompt {
                 border: 1px solid var(--ink);
                 padding: 26px 28px;
@@ -3696,6 +3704,16 @@
                         DA）對內容做同儕審查，最終做人工修正。
                     </p>
                 </div>
+            </div>
+
+            <div class="prompt prompt-brief">
+                <div class="plbl eng-sg">
+                    <span>Prompt · Claude Design</span><b>PROCESS</b>
+                </div>
+                <pre><span class="cmd">/deck</span>  1. 我先把題目、研究對象、UTAUT2 延伸模型、假說和文獻脈絡交代清楚。
+2. 再補上想要的語氣、配色、字型、版面密度，還有不要做成的樣子。
+3. 不直接做完，而是先請它提 3 組風格概念稿，只看封面、架構圖、定義表。
+4. 選定方向後，再把同一套風格展開成完整 15 頁簡報。</pre>
             </div>
 
             <div class="bottom-row">
