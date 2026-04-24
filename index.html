@@ -510,8 +510,9 @@
                 top: 300px;
                 bottom: 120px;
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 40px 56px;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+                align-items: start;
             }
             .s-rq .rq {
                 border-top: 2px solid var(--ink);
@@ -643,11 +644,14 @@
             }
             .s-main .six {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 1fr 1fr;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-rows: repeat(3, 1fr);
                 gap: 22px;
                 width: 60%;
                 height: 100%;
+            }
+            .s-main .b.wide {
+                grid-column: 1 / -1;
             }
             .s-main .b {
                 border: 1px solid var(--ink);
@@ -1131,7 +1135,7 @@
                 top: 300px;
                 bottom: 100px;
                 display: grid;
-                grid-template-columns: repeat(7, 1fr);
+                grid-template-columns: repeat(5, 1fr);
                 gap: 18px;
             }
             .s-hyp .h {
@@ -1197,7 +1201,7 @@
                 border: 1px solid var(--ink);
             }
 
-            /* slide 11 · H8/H9 with literature */
+            /* slide 11 · H6/H7 with literature */
             .s-hyp-ext .grid2 {
                 position: absolute;
                 left: 80px;
@@ -1293,7 +1297,7 @@
                 top: 230px;
                 bottom: 88px;
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(4, 1fr);
                 border-left: 1px solid var(--ink);
                 border-top: 1px solid var(--ink);
             }
@@ -2283,7 +2287,7 @@
                     Questions
                 </h2>
                 <div class="right eng-sg">
-                    RQs · 4 QUESTIONS<br />GOAL · 模型建構
+                    RQs · 3 QUESTIONS<br />GOAL · 模型建構
                 </div>
             </div>
             <div class="doc-sub hei">
@@ -2297,10 +2301,10 @@
                         <span>Research Question</span><b>RQ1</b>
                     </div>
                     <h3 class="ming-b">
-                        UTAUT2 主構面是否能解釋 KOL 情境下的行為意圖？
+                        UTAUT2 主構面是否能直接解釋 KOL 情境下的購買意願？
                     </h3>
                     <p class="hei">
-                        績效期望、努力期望、社會影響、享樂動機、習慣對行為意圖（BI）的解釋力是否成立？促成條件（FC）是否直接推動購買意願（PI）？
+                        績效期望、社會影響、享樂動機、習慣對購買意願（PI）的解釋力是否成立？促成條件（FC）是否也能直接推動購買意願（PI）？
                     </p>
                 </div>
                 <div class="rq">
@@ -2323,19 +2327,7 @@
                         消費者的不確定感，在這個歷程中扮演什麼角色？
                     </h3>
                     <p class="hei">
-                        知覺風險（PR）作為唯一的負向變項，是否對行為意圖（BI）構成顯著抑制？其強度相較於其他正向因子又佔多少比重？
-                    </p>
-                </div>
-                <div class="rq">
-                    <div class="num eng-sg">
-                        <span>Research Question</span><b>RQ4</b>
-                    </div>
-                    <h3 class="ming-b">
-                        「行為意圖 → 購買意向」這條路徑成立嗎？
-                    </h3>
-                    <p class="hei">
-                        在 KOL 推薦情境中，BI 作為中介變項是否能穩定轉化為
-                        PI？整體模型對購買意向的解釋力（R²）落在什麼水準？
+                        知覺風險（PR）作為唯一的負向變項，是否對購買意願（PI）構成顯著抑制？其強度相較於其他正向因子又佔多少比重？
                     </p>
                 </div>
             </div>
@@ -2374,7 +2366,7 @@
                     <p>
                         但本研究不是套用其採用框架，而是把 Instagram 視為
                         <b>購物資訊媒介</b
-                        >——用戶對這個媒介的效益評估、操作熟悉度、社群規範壓力與支援條件，共同形塑他們接觸與接受
+                        >——用戶對這個媒介的效益評估、社群規範壓力與支援條件，共同形塑他們接觸與接受
                         KOL 內容的程度。
                     </p>
                     <p>
@@ -2399,8 +2391,7 @@
                         </p>
                         <div class="cite">
                             Tamilmani et al. (2019) · 針對 79 篇 UTAUT2
-                            實證之後設分析指出：自願採用情境下，HM 對 BI
-                            具顯著影響。
+                            實證之後設分析指出：自願採用情境下，HM 對意圖變項具顯著影響。
                         </div>
                     </div>
                     <div class="cardE">
@@ -2438,10 +2429,10 @@
             </div>
             <div class="doc-head">
                 <h2 class="ming-b">
-                    <span class="fig">§ 2.2</span>UTAUT2 六主構面一覽
+                    <span class="fig">§ 2.2</span>UTAUT2 五主構面一覽
                 </h2>
                 <div class="right eng-sg">
-                    6 CONSTRUCTS<br />PATHS · → BI · → PI
+                    5 CONSTRUCTS<br />PATHS · → PI
                 </div>
             </div>
 
@@ -2462,21 +2453,8 @@
                     </div>
                     <div class="b">
                         <div class="head">
-                            <span class="code eng-sg">EE</span
-                            ><span class="num eng-sg">02</span>
-                        </div>
-                        <div>
-                            <div class="nm">努力期望</div>
-                            <div class="desc hei">
-                                在 IG 上搜尋、閱讀、理解 KOL
-                                推薦的過程是輕鬆、不費心力的程度。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="b">
-                        <div class="head">
                             <span class="code eng-sg">SI</span
-                            ><span class="num eng-sg">03</span>
+                            ><span class="num eng-sg">02</span>
                         </div>
                         <div>
                             <div class="nm">社會影響</div>
@@ -2489,7 +2467,7 @@
                     <div class="b">
                         <div class="head">
                             <span class="code eng-sg">FC</span
-                            ><span class="num eng-sg">04</span>
+                            ><span class="num eng-sg">03</span>
                         </div>
                         <div>
                             <div class="nm">促成條件</div>
@@ -2502,7 +2480,7 @@
                     <div class="b">
                         <div class="head">
                             <span class="code eng-sg">HM</span
-                            ><span class="num eng-sg">05</span>
+                            ><span class="num eng-sg">04</span>
                         </div>
                         <div>
                             <div class="nm">享樂動機</div>
@@ -2512,10 +2490,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="b">
+                    <div class="b wide">
                         <div class="head">
                             <span class="code eng-sg">HB</span
-                            ><span class="num eng-sg">06</span>
+                            ><span class="num eng-sg">05</span>
                         </div>
                         <div>
                             <div class="nm">習慣</div>
@@ -2532,25 +2510,20 @@
                     <h3 class="ming-b">主模型的路徑結構</h3>
                     <div class="eq">
                         <div class="row">
-                            <span class="from">PE / EE / SI / HM / HB</span
+                            <span class="from">PE / SI / HM / HB</span
                             ><span class="arr">─▶</span
-                            ><span class="to">BI</span>
+                            ><span class="to">PI</span>
                         </div>
                         <div class="row">
                             <span class="from">FC</span
                             ><span class="arr">─▶</span
                             ><span class="to">PI</span>
                         </div>
-                        <div class="row">
-                            <span class="from">BI</span
-                            ><span class="arr">─▶</span
-                            ><span class="to">PI</span>
-                        </div>
                     </div>
                     <div class="note hei">
-                        <span class="zh-em">UTAUT2 原始模型</span>同時允許 FC
-                        直接影響使用行為。本研究保留此設定：<em>FC → PI</em>
-                        表示在購物歷程中，平台功能與個人資源的可得性，能越過意圖階段直接促成實際決策。
+                        本研究將主構面直接連到 <em>PI</em>，表示在 KOL
+                        購物情境裡，用戶的效益評估、社會影響、愉悅感與使用習慣，會直接累積成購買判斷；<em>FC
+                        → PI</em> 則代表平台功能與個人資源同樣能直接支撐決策完成。
                     </div>
                 </div>
             </div>
@@ -2573,7 +2546,7 @@
                 <h2 class="ming-b">
                     <span class="fig">§ 2.3</span>外加構面一　·　來源可信度
                 </h2>
-                <div class="right eng-sg">SOURCE CREDIBILITY<br />SC · H8</div>
+                <div class="right eng-sg">SOURCE CREDIBILITY<br />SC · H6</div>
             </div>
 
             <div class="body">
@@ -2669,7 +2642,7 @@
                     <span class="fig">§ 2.4</span>外加構面二　·　知覺風險
                 </h2>
                 <div class="right eng-sg">
-                    PERCEIVED RISK<br />PR · H9 · 唯一負向
+                    PERCEIVED RISK<br />PR · H7 · 唯一負向
                 </div>
             </div>
 
@@ -2687,7 +2660,7 @@
                             推薦再有說服力，購買行為仍須面對「無法親身檢視實體商品」「擔心是業配」「商品是否符合預期」等疑慮。
                         </p>
                         <p>
-                            當這些疑慮的總量超過某個門檻，用戶會<b>主動抑制</b>自己的行為意圖——這也是為什麼本模型僅保留
+                            當這些疑慮的總量超過某個門檻，用戶會<b>主動壓低</b>自己的購買意向——這也是為什麼本模型僅保留
                             PR 作為<span class="zh-em">唯一負向變項</span
                             >：它對應的是消費決策中最真實、最日常的心理摩擦。
                         </p>
@@ -2817,7 +2790,6 @@
                         </marker>
                     </defs>
                     <g stroke="rgba(20,20,20,0.08)" stroke-width="1">
-                        <line x1="920" y1="0" x2="920" y2="770" />
                         <line x1="1400" y1="0" x2="1400" y2="770" />
                         <line x1="0" y1="420" x2="1760" y2="420" />
                     </g>
@@ -2827,26 +2799,12 @@
                         fill="none"
                         marker-end="url(#fPos)"
                     >
-                        <path d="M 310 80  C 580 80, 720 360, 920 390" />
-                        <path d="M 310 180 C 580 180, 740 380, 920 400" />
-                        <path d="M 310 280 C 580 280, 780 390, 920 410" />
-                        <path d="M 310 380 C 580 380, 780 415, 920 420" />
-                        <path d="M 310 480 C 580 480, 780 450, 920 435" />
+                        <path d="M 310 80 C 760 80, 1130 300, 1400 390" />
+                        <path d="M 310 200 C 800 200, 1160 330, 1400 400" />
+                        <path d="M 310 320 C 830 320, 1180 360, 1400 410" />
+                        <path d="M 310 440 C 850 440, 1200 395, 1400 420" />
+                        <path d="M 310 560 C 900 560, 1230 500, 1400 450" />
                     </g>
-                    <path
-                        d="M 1150 420 L 1400 420"
-                        stroke="#141414"
-                        stroke-width="1.8"
-                        fill="none"
-                        marker-end="url(#fPos)"
-                    />
-                    <path
-                        d="M 310 580 C 720 580, 1220 580, 1400 450"
-                        stroke="#141414"
-                        stroke-width="1"
-                        fill="none"
-                        marker-end="url(#fPos)"
-                    />
                     <path
                         d="M 150 710 C 150 420, 180 100, 230 80"
                         stroke="#1a2540"
@@ -2855,7 +2813,7 @@
                         marker-end="url(#fExt)"
                     />
                     <path
-                        d="M 1620 710 C 1360 710, 1220 520, 1150 440"
+                        d="M 1620 710 C 1560 650, 1490 560, 1435 455"
                         stroke="#9a6b2f"
                         stroke-width="1.3"
                         stroke-dasharray="6 4"
@@ -2870,9 +2828,6 @@
                 <div class="group-label hei-m" style="left: 60px; top: 655px">
                     Extensions
                 </div>
-                <div class="group-label hei-m" style="left: 900px; top: 325px">
-                    Mediator
-                </div>
                 <div class="group-label hei-m" style="right: 120px; top: 325px">
                     Outcome
                 </div>
@@ -2883,95 +2838,77 @@
                     </div>
                     <div class="nm">績效期望</div>
                 </div>
-                <div class="node" style="left: 100px; top: 144px">
+                <div class="node" style="left: 100px; top: 164px">
                     <div class="head">
-                        <span class="code">EE</span><span class="idx">02</span>
-                    </div>
-                    <div class="nm">努力期望</div>
-                </div>
-                <div class="node" style="left: 100px; top: 244px">
-                    <div class="head">
-                        <span class="code">SI</span><span class="idx">03</span>
+                        <span class="code">SI</span><span class="idx">02</span>
                     </div>
                     <div class="nm">社會影響</div>
                 </div>
-                <div class="node" style="left: 100px; top: 344px">
+                <div class="node" style="left: 100px; top: 284px">
                     <div class="head">
-                        <span class="code">HM</span><span class="idx">04</span>
+                        <span class="code">HM</span><span class="idx">03</span>
                     </div>
                     <div class="nm">享樂動機</div>
                 </div>
-                <div class="node" style="left: 100px; top: 444px">
+                <div class="node" style="left: 100px; top: 404px">
                     <div class="head">
-                        <span class="code">HB</span><span class="idx">05</span>
+                        <span class="code">HB</span><span class="idx">04</span>
                     </div>
                     <div class="nm">習慣</div>
                 </div>
-                <div class="node" style="left: 100px; top: 544px">
+                <div class="node" style="left: 100px; top: 524px">
                     <div class="head">
-                        <span class="code">FC</span><span class="idx">06</span>
+                        <span class="code">FC</span><span class="idx">05</span>
                     </div>
                     <div class="nm">促成條件</div>
                 </div>
 
                 <div class="node ext" style="left: 100px; top: 690px">
                     <div class="head">
-                        <span class="code">SC</span><span class="idx">08</span>
+                        <span class="code">SC</span><span class="idx">06</span>
                     </div>
                     <div class="nm">來源可信度</div>
                 </div>
                 <div class="node ext" style="right: 130px; top: 680px">
                     <div class="head">
-                        <span class="code">PR</span><span class="idx">09</span>
+                        <span class="code">PR</span><span class="idx">07</span>
                     </div>
                     <div class="nm">知覺風險</div>
                 </div>
 
-                <div class="node target" style="left: 920px; top: 370px">
-                    <div class="head">
-                        <span class="code">BI</span><span class="idx">07</span>
-                    </div>
-                    <div class="nm">行為意圖</div>
-                </div>
                 <div class="node target" style="right: 130px; top: 370px">
                     <div class="head">
-                        <span class="code">PI</span><span class="idx">10</span>
+                        <span class="code">PI</span><span class="idx">08</span>
                     </div>
                     <div class="nm">購買意向</div>
                 </div>
 
-                <div class="hlabel" style="left: 510px; top: 135px">
+                <div class="hlabel" style="left: 700px; top: 120px">
                     <span class="num">H1</span> <span class="sym">+</span>
                 </div>
-                <div class="hlabel" style="left: 510px; top: 205px">
+                <div class="hlabel" style="left: 740px; top: 220px">
                     <span class="num">H2</span> <span class="sym">+</span>
                 </div>
-                <div class="hlabel" style="left: 510px; top: 285px">
+                <div class="hlabel" style="left: 770px; top: 325px">
                     <span class="num">H3</span> <span class="sym">+</span>
                 </div>
-                <div class="hlabel" style="left: 510px; top: 365px">
+                <div class="hlabel" style="left: 790px; top: 420px">
                     <span class="num">H4</span> <span class="sym">+</span>
                 </div>
-                <div class="hlabel" style="left: 510px; top: 450px">
+                <div class="hlabel" style="left: 860px; top: 535px">
                     <span class="num">H5</span> <span class="sym">+</span>
                 </div>
-                <div class="hlabel" style="left: 900px; top: 540px">
+                <div class="hlabel" style="left: 240px; top: 655px">
                     <span class="num">H6</span> <span class="sym">+</span>
                 </div>
-                <div class="hlabel" style="left: 1250px; top: 395px">
-                    <span class="num">H7</span> <span class="sym">+</span>
-                </div>
-                <div class="hlabel" style="left: 240px; top: 655px">
-                    <span class="num">H8</span> <span class="sym">+</span>
-                </div>
-                <div class="hlabel" style="left: 1330px; top: 575px">
-                    <span class="num neg">H9</span> <span class="sym">−</span>
+                <div class="hlabel" style="left: 1345px; top: 565px">
+                    <span class="num neg">H7</span> <span class="sym">−</span>
                 </div>
             </div>
         </section>
 
         <!-- ================================================== 10 HYPOTHESES H1-H7 ================================================== -->
-        <section class="slide s-hyp" data-label="Hypotheses 1–7">
+        <section class="slide s-hyp" data-label="Hypotheses 1–5">
             <div class="reg tl"></div>
             <div class="reg tr"></div>
             <div class="reg bl"></div>
@@ -2985,14 +2922,14 @@
             </div>
             <div class="doc-head">
                 <h2 class="ming-b">
-                    <span class="fig">§ 3.1</span>假說 H1 – H7　·　UTAUT2
-                    主模型七條路徑
+                    <span class="fig">§ 3.1</span>假說 H1 – H5　·　UTAUT2
+                    主模型五條路徑
                 </h2>
-                <div class="right eng-sg">7 HYPOTHESES<br />ALL POSITIVE</div>
+                <div class="right eng-sg">5 HYPOTHESES<br />ALL POSITIVE</div>
             </div>
             <div class="doc-sub hei">
-                前因構面匯流至行為意圖（BI），BI 與 FC
-                各自驅動購買意願（PI）。H1–H7 均預期為正向關係。
+                前因構面直接對購買意願（PI）產生影響，FC 也維持直接路徑；H1–H5
+                均預期為正向關係。
             </div>
 
             <div class="grid">
@@ -3001,73 +2938,59 @@
                     <div class="path">
                         <span>績效期望</span>
                         <span class="arr">↓</span>
-                        <span>行為意圖</span>
+                        <span>購買意願</span>
                     </div>
                     <div class="codes">
-                        <span class="c">PE</span><span class="c out">BI</span>
+                        <span class="c">PE</span><span class="c out">PI</span>
                     </div>
                     <div class="desc hei">
-                        KOL 推薦的績效期望對用戶的行為意圖有正向影響。
+                        Instagram KOL 推薦的績效期望程度對顧客購買意願有正向的影響。
                     </div>
                 </div>
                 <div class="h">
                     <div class="hnum">H2 <span class="sign">(+)</span></div>
                     <div class="path">
-                        <span>努力期望</span>
+                        <span>社會影響</span>
                         <span class="arr">↓</span>
-                        <span>行為意圖</span>
+                        <span>購買意願</span>
                     </div>
                     <div class="codes">
-                        <span class="c">EE</span><span class="c out">BI</span>
+                        <span class="c">SI</span><span class="c out">PI</span>
                     </div>
                     <div class="desc hei">
-                        KOL 推薦的努力期望對用戶的行為意圖有正向影響。
+                        Instagram KOL 推薦的社會影響程度對顧客購買意願有正向的影響。
                     </div>
                 </div>
                 <div class="h">
                     <div class="hnum">H3 <span class="sign">(+)</span></div>
                     <div class="path">
-                        <span>社會影響</span>
+                        <span>享樂動機</span>
                         <span class="arr">↓</span>
-                        <span>行為意圖</span>
+                        <span>購買意願</span>
                     </div>
                     <div class="codes">
-                        <span class="c">SI</span><span class="c out">BI</span>
+                        <span class="c">HM</span><span class="c out">PI</span>
                     </div>
                     <div class="desc hei">
-                        KOL 推薦的社會影響對用戶的行為意圖有正向影響。
+                        Instagram KOL 推薦的享樂動機程度對顧客購買意願有正向的影響。
                     </div>
                 </div>
                 <div class="h">
                     <div class="hnum">H4 <span class="sign">(+)</span></div>
                     <div class="path">
-                        <span>享樂動機</span>
+                        <span>習慣</span>
                         <span class="arr">↓</span>
-                        <span>行為意圖</span>
+                        <span>購買意願</span>
                     </div>
                     <div class="codes">
-                        <span class="c">HM</span><span class="c out">BI</span>
+                        <span class="c">HB</span><span class="c out">PI</span>
                     </div>
                     <div class="desc hei">
-                        KOL 推薦的享樂動機對用戶的行為意圖有正向影響。
+                        Instagram KOL 推薦的習慣程度對顧客購買意願有正向的影響。
                     </div>
                 </div>
                 <div class="h">
                     <div class="hnum">H5 <span class="sign">(+)</span></div>
-                    <div class="path">
-                        <span>習慣</span>
-                        <span class="arr">↓</span>
-                        <span>行為意圖</span>
-                    </div>
-                    <div class="codes">
-                        <span class="c">HB</span><span class="c out">BI</span>
-                    </div>
-                    <div class="desc hei">
-                        KOL 推薦的習慣程度對用戶的行為意圖有正向影響。
-                    </div>
-                </div>
-                <div class="h">
-                    <div class="hnum">H6 <span class="sign">(+)</span></div>
                     <div class="path">
                         <span>促成條件</span>
                         <span class="arr">↓</span>
@@ -3077,28 +3000,14 @@
                         <span class="c">FC</span><span class="c out">PI</span>
                     </div>
                     <div class="desc hei">
-                        KOL 推薦的促成條件對用戶的購買意願有正向影響。
-                    </div>
-                </div>
-                <div class="h">
-                    <div class="hnum">H7 <span class="sign">(+)</span></div>
-                    <div class="path">
-                        <span>行為意圖</span>
-                        <span class="arr">↓</span>
-                        <span>購買意願</span>
-                    </div>
-                    <div class="codes">
-                        <span class="c">BI</span><span class="c out">PI</span>
-                    </div>
-                    <div class="desc hei">
-                        KOL 推薦下的行為意圖對用戶的購買意願有正向影響。
+                        Instagram KOL 推薦的促成條件程度對顧客購買意願有正向的影響。
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================================================== 11 HYPOTHESES H8-H9 ================================================== -->
-        <section class="slide s-hyp-ext" data-label="Hypotheses 8–9">
+        <!-- ================================================== 11 HYPOTHESES H6-H7 ================================================== -->
+        <section class="slide s-hyp-ext" data-label="Hypotheses 6–7">
             <div class="reg tl"></div>
             <div class="reg tr"></div>
             <div class="reg bl"></div>
@@ -3112,29 +3021,26 @@
             </div>
             <div class="doc-head">
                 <h2 class="ming-b">
-                    <span class="fig">§ 3.2</span>假說 H8 · H9　·　延伸構面假說
+                    <span class="fig">§ 3.2</span>假說 H6 · H7　·　延伸構面假說
                 </h2>
                 <div class="right eng-sg">
-                    2 HYPOTHESES<br />H8 (+) · H9 (−)
+                    2 HYPOTHESES<br />H6 (+) · H7 (−)
                 </div>
             </div>
             <div class="doc-sub hei">
-                延伸假說具備清晰的文獻支持：H8 接上 Ohanian-Hovland 傳統；H9
-                接上 Bauer-Featherman 傳統，是本模型唯一的負向路徑。
+                延伸假說具備清晰的文獻支持：H6 接上 Ohanian-Hovland 傳統；H7
+                接上 Bauer-Featherman 傳統，是本模型唯一指向購買意向的負向路徑。
             </div>
 
             <div class="grid2">
                 <div class="hbig">
                     <div class="hd">
-                        <div class="hnum">H8<span class="sign">(+)</span></div>
+                        <div class="hnum">H6<span class="sign">(+)</span></div>
                         <div class="rel">SC &nbsp;→&nbsp; PE</div>
                     </div>
                     <h3 class="ming-b">來源可信度 → 績效期望</h3>
                     <p class="desc hei">
-                        Instagram KOL
-                        推薦的來源可信程度，對用戶的績效期望有<b>正向</b>影響——當
-                        KOL
-                        被知覺為專業、誠實、具吸引力時，用戶更傾向相信其推薦的商品資訊能帶來實際效益。
+                        Instagram KOL 推薦的來源可信程度對顧客績效期望有<b>正向</b>的影響——當 KOL 被知覺為專業、誠實、具吸引力時，顧客更傾向相信其推薦的商品資訊能帶來實際效益。
                     </p>
                     <div class="lit-label eng-sg">
                         文獻支持 · Literature Support
@@ -3153,13 +3059,12 @@
 
                 <div class="hbig neg">
                     <div class="hd">
-                        <div class="hnum">H9<span class="sign">(−)</span></div>
-                        <div class="rel">PR &nbsp;→&nbsp; BI</div>
+                        <div class="hnum">H7<span class="sign">(−)</span></div>
+                        <div class="rel">PR &nbsp;→&nbsp; PI</div>
                     </div>
-                    <h3 class="ming-b">知覺風險 → 行為意圖</h3>
+                    <h3 class="ming-b">知覺風險 → 購買意向</h3>
                     <p class="desc hei">
-                        Instagram KOL
-                        推薦情境下的知覺風險，對用戶的行為意圖有<b>負向</b>影響——當對商品不確定、對業配真實性懷疑、或擔憂金錢損失時，用戶形成行為意圖的意願下降。
+                        Instagram KOL 推薦的知覺風險對顧客購買意向有<b>負向</b>的影響——當對商品不確定、對業配真實性懷疑、或擔憂金錢損失時，顧客的購買傾向會明顯下降。
                     </p>
                     <div class="lit-label eng-sg">
                         文獻支持 · Literature Support
@@ -3194,10 +3099,10 @@
             <div class="doc-head">
                 <h2 class="ming-b">
                     <span class="fig">Tab. 01</span>操作型定義(上) + 問卷題項 -
-                    PE / EE / SI / FC / HM
+                    PE / SI / FC / HM
                 </h2>
                 <div class="right eng-sg">
-                    5 of 10 constructs<br />3 items each
+                    4 of 8 constructs<br />3 items each
                 </div>
             </div>
 
@@ -3237,39 +3142,6 @@
                 <div class="cell">
                     <div class="cell-head">
                         <span class="num">02 · UTAUT2</span
-                        ><span class="code">EE</span>
-                    </div>
-                    <div class="cn">努力期望</div>
-                    <div class="en">Effort Expectancy</div>
-                    <div class="def hei">
-                        使用者知覺到在 Instagram 上搜尋、閱讀或理解 KOL
-                        推薦內容之過程是輕鬆、簡單且不費心力的程度。
-                    </div>
-                    <div class="items hei">
-                        <div class="items-label eng-sg">
-                            Questionnaire Items
-                        </div>
-                        <div class="q">
-                            <b>EE1</b>　我能輕易在 Instagram 上找到我想參考的
-                            KOL 貼文。
-                        </div>
-                        <div class="q">
-                            <b>EE2</b>　我操作 Instagram
-                            的商品標籤與連結並不困難。
-                        </div>
-                        <div class="q">
-                            <b>EE3</b>　理解 Instagram KOL
-                            介紹商品的方式對我而言相當容易。
-                        </div>
-                    </div>
-                    <div class="ref">
-                        <b>Moore &amp; Benbasat</b> (1991)<br /><b>Davis</b>
-                        (1989)
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="cell-head">
-                        <span class="num">03 · UTAUT2</span
                         ><span class="code">SI</span>
                     </div>
                     <div class="cn">社會影響</div>
@@ -3301,7 +3173,7 @@
                 </div>
                 <div class="cell">
                     <div class="cell-head">
-                        <span class="num">04 · UTAUT2</span
+                        <span class="num">03 · UTAUT2</span
                         ><span class="code">FC</span>
                     </div>
                     <div class="cn">促成條件</div>
@@ -3336,7 +3208,7 @@
                 </div>
                 <div class="cell accent">
                     <div class="cell-head">
-                        <span class="num">05 · UTAUT2 ext.</span
+                        <span class="num">04 · UTAUT2 ext.</span
                         ><span class="code">HM</span>
                     </div>
                     <div class="cn">享樂動機</div>
@@ -3388,17 +3260,17 @@
             <div class="doc-head">
                 <h2 class="ming-b">
                     <span class="fig">Tab. 02</span>操作型定義(下) + 問卷題項 -
-                    HB / SC / PR / BI / PI
+                    HB / SC / PR / PI
                 </h2>
                 <div class="right eng-sg">
-                    5 of 10 constructs<br />3 items each
+                    4 of 8 constructs<br />3 items each
                 </div>
             </div>
 
             <div class="grid-wrap">
                 <div class="cell accent">
                     <div class="cell-head">
-                        <span class="num">06 · UTAUT2 ext.</span
+                        <span class="num">05 · UTAUT2 ext.</span
                         ><span class="code">HB</span>
                     </div>
                     <div class="cn">習慣</div>
@@ -3432,7 +3304,7 @@
                 </div>
                 <div class="cell accent">
                     <div class="cell-head">
-                        <span class="num">07 · EXTENSION</span
+                        <span class="num">06 · EXTENSION</span
                         ><span class="code">SC</span>
                     </div>
                     <div class="cn">來源可信度</div>
@@ -3465,7 +3337,7 @@
                 </div>
                 <div class="cell accent">
                     <div class="cell-head">
-                        <span class="num">08 · EXTENSION</span
+                        <span class="num">07 · EXTENSION</span
                         ><span class="code">PR</span>
                     </div>
                     <div class="cn">知覺風險</div>
@@ -3500,40 +3372,7 @@
                 </div>
                 <div class="cell">
                     <div class="cell-head">
-                        <span class="num">09 · MEDIATOR</span
-                        ><span class="code">BI</span>
-                    </div>
-                    <div class="cn">行為意圖</div>
-                    <div class="en">Behavioral Intention</div>
-                    <div class="def hei">
-                        使用者在瀏覽 Instagram KOL
-                        的推薦內容後，主觀評估自己在未來一段時間內，實際執行購買該商品或採用該建議的可能性與計畫程度。
-                    </div>
-                    <div class="items">
-                        <div class="items-label eng-sg">
-                            Questionnaire Items
-                        </div>
-                        <div class="q">
-                            <b>BI1</b>　我打算在未來持續透過 Instagram 參考 KOL
-                            推薦的商品。
-                        </div>
-                        <div class="q">
-                            <b>BI2</b>　我預計我會經常查看 Instagram 上 KOL
-                            的開箱或示範。
-                        </div>
-                        <div class="q">
-                            <b>BI3</b>　我會向他人推薦將 Instagram KOL
-                            作為購物的參考來源。
-                        </div>
-                    </div>
-                    <div class="ref">
-                        <b>Ajzen</b> (1991)<br /><b>Fishbein &amp; Ajzen</b>
-                        (1975)
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="cell-head">
-                        <span class="num">10 · OUTCOME</span
+                        <span class="num">08 · OUTCOME</span
                         ><span class="code">PI</span>
                     </div>
                     <div class="cn">購買意向</div>
